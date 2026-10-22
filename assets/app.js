@@ -599,6 +599,41 @@ async function initCopy() {
   });
 }
 
+/* ---------------- Menú mobile ---------------- */
+
+function initMobileMenu() {
+  const btn = document.getElementById('menu-toggle');
+  const nav = document.getElementById('mobile-nav');
+  const header = document.getElementById('header');
+  if (!btn || !nav) return;
+
+  const close = () => {
+    nav.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+    header.classList.remove('is-open');
+    header.classList.toggle('is-stuck', window.scrollY > 12);
+  };
+
+  btn.addEventListener('click', () => {
+    const open = nav.hidden;
+    nav.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    header.classList.toggle('is-open', open);
+    header.classList.toggle('is-stuck', open || window.scrollY > 12);
+  });
+
+  nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !nav.hidden) {
+      close();
+      btn.focus();
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760 && !nav.hidden) close();
+  });
+}
+
 /* ---------------- Arranque ---------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -628,4 +663,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScroll();
   initPointer();
   initCopy();
+  initMobileMenu();
 });

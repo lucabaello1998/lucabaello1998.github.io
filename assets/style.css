@@ -414,6 +414,24 @@ section { padding: 92px 0; }
   color: var(--accent-ink);
 }
 
+.menu-btn { display: none; }
+
+.mobile-nav {
+  display: none;
+  padding: 8px 24px 18px;
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.mobile-nav a {
+  display: block;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg-soft);
+  font-size: 15px;
+}
+.mobile-nav a:last-child { border-bottom: 0; }
+.mobile-nav a:active { color: var(--accent); }
+
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -1105,6 +1123,8 @@ section { padding: 92px 0; }
 
 @media (max-width: 760px) {
   .nav { display: none; }
+  .menu-btn { display: inline-grid; }
+  .mobile-nav:not([hidden]) { display: block; }
   .header-tools { margin-left: auto; border-left: 0; padding-left: 0; }
   .job-when { margin-left: 0; width: 100%; }
   .hero-meta { gap: 8px 14px; }
