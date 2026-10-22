@@ -21,7 +21,7 @@ const I18N = {
     'hero.title2': 'de punta a punta.',
     'hero.role': 'Full Stack Engineer',
     'hero.lead':
-      'Cinco años pasando de la consulta SQL lenta a la pantalla que el usuario ve rápido: React / Next.js arriba, C# / .NET 8 abajo, y bases de datos que aguantan producción.',
+      'Desarrollador Full Stack con cinco años construyendo sistemas en producción de punta a punta: interfaces en React y Next.js, APIs en C# / .NET 8, y bases de datos PostgreSQL y SQL Server ajustadas para carga real.',
     'hero.ctaProjects': 'Ver proyectos',
     'hero.ctaCv': 'Descargar CV',
     'hero.remote': 'Remoto · Híbrido',
@@ -176,7 +176,7 @@ const I18N = {
     'hero.title2': 'end to end.',
     'hero.role': 'Full Stack Engineer',
     'hero.lead':
-      'Five years moving from the slow SQL query to the screen the user sees fast: React / Next.js on top, C# / .NET 8 underneath, and databases that hold up in production.',
+      'Full Stack developer with five years building end-to-end production systems: React and Next.js interfaces, C# / .NET 8 APIs, and PostgreSQL and SQL Server databases tuned for real workloads.',
     'hero.ctaProjects': 'See projects',
     'hero.ctaCv': 'Download CV',
     'hero.remote': 'Remote · Hybrid',
