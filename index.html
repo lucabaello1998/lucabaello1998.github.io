@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luca Baello — Full Stack Engineer</title>
+<meta name="description" content="Full Stack Engineer con 5 años de experiencia: React / Next.js y .NET 8, arquitecturas limpias, PostGIS, tiempo real y productos móviles. Buenos Aires, Argentina.">
+<meta name="author" content="Luca Nicolás Baello">
+<meta name="theme-color" content="#07080b">
+<link rel="canonical" href="https://lucabaello1998.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lucabaello1998.github.io/">
+<meta property="og:title" content="Luca Baello — Full Stack Engineer">
+<meta property="og:description" content="Full Stack Engineer: React / Next.js + .NET 8. Sistemas en producción, tiempo real, PostGIS y apps móviles offline-first.">
+<meta property="og:image" content="https://lucabaello1998.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luca Baello — Full Stack Engineer">
+<meta name="twitter:description" content="React / Next.js + .NET 8. De la base de datos a la pantalla.">
+<meta name="twitter:image" content="https://lucabaello1998.github.io/assets/img/og.png">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+
+<script>
+  /* Evita el flash de idioma/tema: se resuelve antes del primer pintado.
+     Prioridad: query (?lang, ?theme) → localStorage → preferencia del sistema. */
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var q = new URLSearchParams(location.search);
+    var t = q.get('theme'), l = q.get('lang');
+    try {
+      t = t || localStorage.getItem('lb.theme');
+      l = l || localStorage.getItem('lb.lang');
+    } catch (e) { /* modo privado */ }
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    d.dataset.theme = t;
+    if (l !== 'es' && l !== 'en') {
+      l = (navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+    }
+    d.lang = l;
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Luca Nicolás Baello",
+  "jobTitle": "Full Stack Software Engineer",
+  "email": "mailto:luca.baello@gmail.com",
+  "url": "https://lucabaello1998.github.io/",
+  "image": "https://lucabaello1998.github.io/assets/img/avatar.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+  "sameAs": [
+    "https://github.com/lucabaello1998",
+    "https://www.linkedin.com/in/luca-baello"
+  ],
+  "knowsAbout": ["React", "Next.js", "C#", ".NET", "PostgreSQL", "PostGIS", "Flutter", "Azure DevOps", "SignalR", "Clean Architecture"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<div class="ambient" aria-hidden="true"></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+<div class="scroll-progress" id="progress" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Luca Baello">
+      <span class="brand-mark" aria-hidden="true">LB</span>
+      <span class="brand-text">Luca Baello
+        <small data-i18n="brand.role">Full Stack Engineer</small>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+      <a href="#stack" data-i18n="nav.stack">Stack</a>
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="status" data-reveal>
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="hero.status">Abierto a nuevas oportunidades</span>
+        </span>
+
+        <h1 data-reveal style="--delay:60ms">
+          <span data-i18n="hero.title1">Construyo productos</span><br>
+          <span class="grad" data-i18n="hero.title2">de punta a punta.</span>
+        </h1>
+
+        <p class="hero-role" data-reveal style="--delay:120ms">
+          Luca Nicolás Baello · <span data-i18n="hero.role">Full Stack Engineer</span>
+        </p>
+
+        <p class="hero-lead" data-reveal style="--delay:180ms" data-i18n="hero.lead">
+          Cinco años pasando de la consulta SQL lenta a la pantalla que el usuario ve rápido:
+          React / Next.js arriba, C# / .NET 8 abajo, y bases de datos que aguantan producción.
+        </p>
+
+        <div class="hero-actions" data-reveal style="--delay:240ms">
+          <a class="btn btn-primary" href="#projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            <span data-i18n="hero.ctaProjects">Ver proyectos</span>
+          </a>
+          <a class="btn" href="cv/CV_Luca_Baello_ES_Fullstack.pdf" id="cv-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+            <span data-i18n="hero.ctaCv">Descargar CV</span>
+          </a>
+        </div>
+
+        <div class="hero-meta" data-reveal style="--delay:300ms">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Buenos Aires, AR
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
+            <span data-i18n="hero.remote">Remoto · Híbrido</span>
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 21h8M12 17v4"/><rect x="3" y="4" width="18" height="12" rx="2"/></svg>
+            <span data-i18n="hero.stackShort">React · .NET · PostgreSQL</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="portrait" data-reveal="scale" style="--delay:120ms">
+        <div class="portrait-ring" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <img src="assets/img/avatar.jpg" alt="Luca Nicolás Baello" width="560" height="560" fetchpriority="high">
+        </div>
+        <div class="portrait-badge">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="hero.badge">5 años en producción</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METRICS ===================== -->
+  <section class="wrap" aria-label="Métricas" style="padding: 0 24px 0">
+    <div class="metrics" data-reveal>
+      <div class="metric">
+        <div class="metric-value" data-count="5" data-suffix="+">5+</div>
+        <div class="metric-label" data-i18n="metrics.years">años construyendo software en producción</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" data-count="97.4" data-suffix="%" data-decimals="1">97,4%</div>
+        <div class="metric-label" data-i18n="metrics.delivery">de entrega: 749 de 769 work items</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" data-count="63" data-prefix="−" data-suffix="%">−63%</div>
+        <div class="metric-label" data-i18n="metrics.bundle">del bundle inicial de la SPA (1,4 MB a 533 KB)</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" data-count="50" data-suffix="+">50+</div>
+        <div class="metric-label" data-i18n="metrics.modules">módulos de gestión en operación activa</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="about.eyebrow">Sobre mí</span>
+        <h2 class="section-title" data-i18n="about.title">Del problema al sistema que lo resuelve.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p data-i18n="about.p1">
+            Soy desarrollador Full Stack con cinco años construyendo sistemas productivos de punta a
+            punta: portales de logística, PWAs offline-first, ERPs y marketplaces. Me muevo cómodo
+            tanto escribiendo un índice que baja una consulta de 13 a 6 queries como diseñando la
+            pantalla donde esa consulta se vuelve útil.
+          </p>
+          <p data-i18n="about.p2">
+            Trabajo con <strong>React 19 / Next.js</strong> y <strong>C# / .NET 8</strong>, con
+            Clean Architecture, CQRS y tests como red de seguridad. Me interesa la parte que casi no
+            se ve: autenticación que no se rompe, migraciones que no duelen y un pipeline que
+            despliega sin que nadie mire el reloj.
+          </p>
+          <p data-i18n="about.p3">
+            También construyo herramientas para desarrollar con IA: agentes, monitoreo de costos de
+            tokens y automatizaciones que me sacan trabajo repetitivo del medio.
+          </p>
+        </div>
+
+        <ul class="fact-list" data-reveal style="--delay:120ms">
+          <li class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div><b>Buenos Aires, Argentina</b><br><span data-i18n="facts.location">GMT-3 · abierto a remoto</span></div>
+          </li>
+          <li class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 19V5m0 0h7a4 4 0 0 1 0 8H4m0 0h8a4 4 0 0 1 0 8H4"/></svg>
+            <div><b data-i18n="facts.edu">Lic. en Informática (en curso)</b><br><span>UNAHUR</span></div>
+          </li>
+          <li class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
+            <div><b data-i18n="facts.langs">Español nativo · Inglés B1/B2</b><br><span data-i18n="facts.langsSub">documentación y charlas técnicas</span></div>
+          </li>
+          <li class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg>
+            <div><b data-i18n="facts.focus">Foco actual</b><br><span data-i18n="facts.focusSub">productos propios + IA aplicada</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="projects.eyebrow">Proyectos</span>
+        <h2 class="section-title" data-i18n="projects.title">Lo que construí y puedo mostrar.</h2>
+        <p class="section-lead" data-i18n="projects.lead">
+          Tres productos propios en marcha y dos sistemas de empresa donde el código no es público.
+          Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.
+        </p>
+      </div>
+
+      <div class="projects">
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">01</span>
+              <span class="project-kind is-live" data-i18n="projects.fletar.kind">En vivo</span>
+            </div>
+            <h3>FletAR</h3>
+            <p class="project-tagline" data-i18n="projects.fletar.tagline">Marketplace de fletes con subasta a ciegas y seguimiento en vivo</p>
+            <p data-i18n="projects.fletar.desc">
+              App Flutter y API .NET 8: publicás una carga en el mapa, los fleteros ofertan sin ver
+              las ofertas de los demás, el dueño acepta y el viaje se sigue por GPS. Autenticación
+              con refresh token rotativo, chat por oferta y verificación de identidad con documentos
+              en un circuito privado.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.fletar.h1">PostGIS + ST_DWithin para cercanía real</li>
+              <li data-i18n="projects.fletar.h2">SignalR para tracking y chat</li>
+              <li data-i18n="projects.fletar.h3">Autocompletado de direcciones ⇄ mapa</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Flutter</span><span class="tag">.NET 8</span><span class="tag">PostgreSQL</span>
+              <span class="tag">PostGIS</span><span class="tag">SignalR</span><span class="tag">Railway</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://lucabaello1998.github.io/FletAR/" target="_blank" rel="noopener">
+              <span data-i18n="projects.site">Ver sitio</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="project-link" href="https://github.com/lucabaello1998/FletAR" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">02</span>
+              <span class="project-kind is-live" data-i18n="projects.opencockpit.kind">Open source</span>
+            </div>
+            <h3>OpenCockpit</h3>
+            <p class="project-tagline" data-i18n="projects.opencockpit.tagline">Dashboard local-first para el costo real de las herramientas de IA</p>
+            <p data-i18n="projects.opencockpit.desc">
+              App de escritorio (Electron + React) que lee lo que Claude Code, OpenCode, Codex,
+              Gemini, Copilot, Cursor y Cline dejan en disco, y lo unifica en un panel de sesiones,
+              tokens, costos y conversaciones. Sin backend ni telemetría: los números se calculan
+              localmente y los datos no salen de la máquina.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.opencockpit.h1">Deduplicación por message.id / requestId</li>
+              <li data-i18n="projects.opencockpit.h2">Subagentes sumados a la sesión raíz</li>
+              <li data-i18n="projects.opencockpit.h3">7 fuentes de datos distintas, un solo panel</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Electron</span><span class="tag">React 19</span><span class="tag">SQLite</span>
+              <span class="tag">Vite</span><span class="tag">MIT</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/OpenCockpit" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+            <a class="project-link" href="https://github.com/lucabaello1998/OpenCockpit/releases/latest" target="_blank" rel="noopener">
+              <span data-i18n="projects.download">Descargar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">03</span>
+              <span class="project-kind is-private" data-i18n="projects.tms.kind">Empresa · código privado</span>
+            </div>
+            <h3>Ceta Logística — TMS / WMS</h3>
+            <p class="project-tagline" data-i18n="projects.tms.tagline">Planificación de rutas y trazabilidad para operación real</p>
+            <p data-i18n="projects.tms.desc">
+              Monorepo con más de 50 módulos en producción: planificador visual de rutas con mapa
+              interactivo y reordenamiento de entregas, trazabilidad satelital de transportistas y
+              una app para choferes y depósito. Acá se juntaron las tres partes: base de datos,
+              backend y UI.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.tms.h1">13 → 6 queries por transacción</li>
+              <li data-i18n="projects.tms.h2">41 → 2 requests por pantalla (sin N+1)</li>
+              <li data-i18n="projects.tms.h3">86 merges de entorno, 705 commits propios</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">.NET 8</span><span class="tag">React 19</span><span class="tag">SQL Server</span>
+              <span class="tag">EF Core</span><span class="tag">Capacitor</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="#contact" data-i18n="projects.askMe">Pedime el detalle</a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">04</span>
+              <span class="project-kind" data-i18n="projects.rem.kind">Empresa · misión crítica</span>
+            </div>
+            <h3>REM v3 — Gestión regulatoria farmacéutica</h3>
+            <p class="project-tagline" data-i18n="projects.rem.tagline">Expedientes médicos con firma digital y aprobaciones multi-nivel</p>
+            <p data-i18n="projects.rem.desc">
+              Sistema regulatorio en .NET 8 + React + shadcn/ui para la industria farmacéutica:
+              trazabilidad completa de expedientes, tres bases de datos coordinadas, visualización
+              nativa de PDF y un flujo de aprobación que no admite atajos.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.rem.h1">Auditoría transaccional estricta</li>
+              <li data-i18n="projects.rem.h2">Firma digital de aprobaciones</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">.NET 8</span><span class="tag">React</span><span class="tag">shadcn/ui</span>
+              <span class="tag">SQL Server</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">05</span>
+              <span class="project-kind is-live" data-i18n="projects.opencockpit.kind">Open source</span>
+            </div>
+            <h3>direcciones_ar</h3>
+            <p class="project-tagline" data-i18n="projects.dirs.tagline">Autocompletado de direcciones argentinas, como paquete de Dart</p>
+            <p data-i18n="projects.dirs.desc">
+              La pieza de geocoding de FletAR, extraída como librería reutilizable sobre Nominatim:
+              caché LRU, cola de una request por segundo y un parser que devuelve calle, altura,
+              barrio y localidad ya separados. CI con tests en cada push.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.dirs.h1">17 tests sin tocar el servicio real</li>
+              <li data-i18n="projects.dirs.h2">“Sin resultados” ≠ “falló el servicio”</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Dart</span><span class="tag">Flutter</span><span class="tag">OpenStreetMap</span>
+              <span class="tag">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/direcciones_ar" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">06</span>
+              <span class="project-kind" data-i18n="projects.glass.kind">Experimento</span>
+            </div>
+            <h3>Liquid Glass Lab</h3>
+            <p class="project-tagline" data-i18n="projects.glass.tagline">Refracción de vidrio líquido en tiempo real, sin pre-render</p>
+            <p data-i18n="projects.glass.desc">
+              Contador y lista con drag &amp; drop donde el vidrio refracta lo que hay detrás. El
+              efecto se calcula en runtime con feDisplacementMap y un mapa de distancias firmado
+              generado en el navegador, en vez de usar una imagen de fondo.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.glass.h1">SDF + displacement map generados al vuelo</li>
+              <li data-i18n="projects.glass.h2">React 19 + Tailwind v4 + dnd-kit</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind v4</span>
+              <span class="tag">SVG</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/liquid-glass-lab" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="experience.eyebrow">Experiencia</span>
+        <h2 class="section-title" data-i18n="experience.title">Cinco años, cuatro equipos.</h2>
+        <p class="section-lead" data-i18n="experience.lead">
+          De soporte de redes a liderar el frontend y el backend de sistemas que usa gente todos los días.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="job" data-reveal>
+          <div class="job-head">
+            <h3 data-i18n="jobs.ceta.role">Desarrollador Full Stack Semi-Senior</h3>
+            <span class="job-company">Grupo CETA</span>
+            <span class="job-when" data-i18n="jobs.ceta.when">Ago 2024 — Sep 2026</span>
+          </div>
+          <ul>
+            <li data-i18n="jobs.ceta.b1"><strong>Logística (TMS/WMS):</strong> planificador visual de rutas, reordenamiento dinámico de entregas y picking atómico para varios operarios a la vez.</li>
+            <li data-i18n="jobs.ceta.b2"><strong>Seguridad:</strong> esquema JWT de la organización con refresh rotativo y revocación. Detecté y corregí una vulnerabilidad de timing attack: de 46 ms a 0,77 ms, con tests automatizados.</li>
+            <li data-i18n="jobs.ceta.b3"><strong>Performance:</strong> 13 → 6 queries por transacción y 41 → 2 requests por pantalla, eliminando retardos por N+1.</li>
+            <li data-i18n="jobs.ceta.b4"><strong>PWA offline-first:</strong> fichaje de colaboradores con biometría, cámara, georreferencia y sincronización ante pérdida de conexión.</li>
+            <li data-i18n="jobs.ceta.b5"><strong>DevOps:</strong> pipelines YAML en Azure DevOps para pruebas y producción, 86 merges de entorno y 705 commits propios.</li>
+          </ul>
+        </article>
+
+        <article class="job" data-reveal>
+          <div class="job-head">
+            <h3 data-i18n="jobs.unahur.role">Desarrollador Full Stack</h3>
+            <span class="job-company">Universidad Nacional de Hurlingham</span>
+            <span class="job-when" data-i18n="jobs.unahur.when">Mar 2023 — Oct 2023</span>
+          </div>
+          <ul>
+            <li data-i18n="jobs.unahur.b1">Aplicaciones web institucionales para dependencias públicas y clientes del sector privado.</li>
+            <li data-i18n="jobs.unahur.b2">Módulos frontend en React y Tailwind CSS; servicios backend en Node.js, Express, PHP y MySQL con Sequelize.</li>
+          </ul>
+        </article>
+
+        <article class="job" data-reveal>
+          <div class="job-head">
+            <h3 data-i18n="jobs.telecentro.role">Soporte Técnico N1/N2/N3 — Especialista de Redes</h3>
+            <span class="job-company">Telecentro</span>
+            <span class="job-when" data-i18n="jobs.telecentro.when">Oct 2023 — Ago 2024</span>
+          </div>
+          <ul>
+            <li data-i18n="jobs.telecentro.b1">Diagnóstico de incidencias complejas de conectividad: routing, switches, redes Wi-Fi mesh, IPv4/IPv6 y FTTH/coaxial.</li>
+            <li data-i18n="jobs.telecentro.b2">Atención avanzada a clientes residenciales y corporativos con cumplimiento estricto de SLA.</li>
+          </ul>
+        </article>
+
+        <article class="job" data-reveal>
+          <div class="job-head">
+            <h3 data-i18n="jobs.claro.role">Coordinador de Proyectos Corporativos</h3>
+            <span class="job-company">Claro Argentina</span>
+            <span class="job-when" data-i18n="jobs.claro.when">Jun 2022 — Mar 2023</span>
+          </div>
+          <ul>
+            <li data-i18n="jobs.claro.b1">Plataforma CRM a medida en PHP, SQL y jQuery para seguimiento y asignación de órdenes técnicas.</li>
+            <li data-i18n="jobs.claro.b2">Scripts de automatización en Python que redujeron 40% el tiempo de reportes administrativos y conciliaciones.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STACK ===================== -->
+  <section id="stack">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="stack.eyebrow">Stack</span>
+        <h2 class="section-title" data-i18n="stack.title">Con qué trabajo.</h2>
+        <p class="section-lead" data-i18n="stack.lead">Herramientas que usé en producción, no las que leí en un tutorial.</p>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-card" data-reveal>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 22h8"/></svg>
+            <span data-i18n="stack.frontend">Frontend</span>
+          </h3>
+          <div class="tags">
+            <span class="tag">React 19</span><span class="tag">Next.js 15</span><span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span><span class="tag">Zustand</span><span class="tag">shadcn/ui</span>
+            <span class="tag">Material UI</span><span class="tag">PrimeReact</span>
+          </div>
+        </div>
+
+        <div class="stack-card" data-reveal style="--delay:70ms">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+            <span data-i18n="stack.backend">Backend</span>
+          </h3>
+          <div class="tags">
+            <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">ASP.NET Core</span>
+            <span class="tag">EF Core</span><span class="tag">Dapper</span><span class="tag">Node.js</span>
+            <span class="tag">Express</span><span class="tag">SignalR</span>
+          </div>
+        </div>
+
+        <div class="stack-card" data-reveal style="--delay:140ms">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3c4 0 6 2 6 5s-2 5-6 5-6-2-6-5 2-5 6-5ZM6 13v4c0 2.8 2.7 5 6 5s6-2.2 6-5v-4"/></svg>
+            <span data-i18n="stack.data">Datos</span>
+          </h3>
+          <div class="tags">
+            <span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">PostGIS</span>
+            <span class="tag">MySQL</span><span class="tag">Query tuning</span><span class="tag">Índices</span>
+          </div>
+        </div>
+
+        <div class="stack-card" data-reveal>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.6A4.5 4.5 0 0 1 18 18H4Z"/></svg>
+            <span data-i18n="stack.cloud">Cloud &amp; DevOps</span>
+          </h3>
+          <div class="tags">
+            <span class="tag">Azure DevOps</span><span class="tag">Docker</span><span class="tag">IIS</span>
+            <span class="tag">Railway</span><span class="tag">GitHub Actions</span><span class="tag">Linux</span>
+          </div>
+        </div>
+
+        <div class="stack-card" data-reveal style="--delay:70ms">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg>
+            <span data-i18n="stack.mobile">Mobile</span>
+          </h3>
+          <div class="tags">
+            <span class="tag">Flutter</span><span class="tag">Capacitor</span><span class="tag">PWA</span>
+            <span class="tag">Service Workers</span><span class="tag">IndexedDB</span>
+          </div>
+        </div>
+
+        <div class="stack-card" data-reveal style="--delay:140ms">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg>
+            <span data-i18n="stack.ai">IA aplicada</span>
+          </h3>
+          <div class="tags">
+            <span class="tag">Claude</span><span class="tag">OpenAI Codex</span><span class="tag">Copilot</span>
+            <span class="tag">Ollama</span><span class="tag">MCP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" style="padding-top: 0">
+    <div class="wrap">
+      <div class="split">
+        <div class="card" data-reveal>
+          <div class="card-row">
+            <h3 data-i18n="edu.degree">Licenciatura en Informática</h3>
+            <span class="badge" data-i18n="edu.badge">En curso</span>
+          </div>
+          <p class="card-sub">Universidad Nacional de Hurlingham (UNAHUR)</p>
+          <p data-i18n="edu.desc">Algoritmos, estructuras de datos, diseño de sistemas concurrentes y bases de datos relacionales.</p>
+        </div>
+
+        <div class="card" data-reveal style="--delay:80ms">
+          <div class="card-row">
+            <h3 data-i18n="eng.title">Idiomas</h3>
+          </div>
+          <p class="card-sub" data-i18n="eng.es">Español — nativo</p>
+          <p data-i18n="eng.en">Inglés — B1/B2 profesional: conversaciones técnicas, lectura fluida de documentación y redacción de issues y PRs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-card" data-reveal="scale">
+        <span class="eyebrow" data-i18n="contact.eyebrow">Contacto</span>
+        <h2 data-i18n="contact.title">¿Buscás alguien que cierre el círculo entre frontend y backend?</h2>
+        <p data-i18n="contact.desc">
+          Estoy disponible para roles full stack, semi-senior o senior, en relación de dependencia o
+          por proyecto. Respondo en el día.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:luca.baello@gmail.com?subject=Oportunidad%20-%20Full%20Stack">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>luca.baello@gmail.com</span>
+          </a>
+          <button class="btn btn-ghost" type="button" id="copy-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span data-i18n="contact.copy">Copiar email</span>
+          </button>
+          <span class="copy-state" id="copy-state" role="status" data-i18n="contact.copied">¡Copiado!</span>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://github.com/lucabaello1998" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 8.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/luca-baello" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.2 8.5h4.6V24H.2V8.5Zm7.5 0h4.4v2.1h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V24h-4.6v-7.5c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4V24H7.7V8.5Z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/lucabaello1998/FletAR/releases/latest" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+            <span data-i18n="contact.apk">Probar FletAR (APK)</span>
+          </a>
+          <a href="cv/CV_Luca_Baello_ES_Fullstack.pdf" target="_blank" rel="noopener" data-cv-link>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/></svg>
+            <span data-i18n="contact.cv">CV en PDF</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="mono">© <span id="year">2026</span> Luca Nicolás Baello</span>
+    <span data-i18n="footer.made">Hecho a mano: HTML, CSS y JavaScript. Sin frameworks.</span>
+    <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
