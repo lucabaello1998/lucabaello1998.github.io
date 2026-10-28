@@ -7,7 +7,7 @@ const I18N = {
   es: {
     'meta.title': 'Luca Baello — Full Stack Engineer',
     'meta.description':
-      'Full Stack Engineer con 5 años de experiencia: React / Next.js y .NET 8, arquitecturas limpias, PostGIS, tiempo real y productos móviles. Buenos Aires, Argentina.',
+      'Full Stack Engineer con 5 años de experiencia: React / Next.js, .NET 8 y PHP / Laravel, arquitecturas limpias, PostGIS, tiempo real y productos móviles. Buenos Aires, Argentina.',
     'a11y.skip': 'Saltar al contenido',
     'brand.role': 'Full Stack Engineer',
     'nav.projects': 'Proyectos',
@@ -21,7 +21,7 @@ const I18N = {
     'hero.title2': 'de punta a punta.',
     'hero.role': 'Full Stack Engineer',
     'hero.lead':
-      'Desarrollador Full Stack con cinco años construyendo sistemas en producción de punta a punta: interfaces en React y Next.js, APIs en C# / .NET 8, y bases de datos PostgreSQL y SQL Server ajustadas para carga real.',
+      'Desarrollador Full Stack con cinco años construyendo sistemas en producción de punta a punta: interfaces en React y Next.js, APIs en C# / .NET 8 y en PHP / Laravel, y bases de datos PostgreSQL, SQL Server y MySQL ajustadas para carga real.',
     'hero.ctaProjects': 'Ver proyectos',
     'hero.ctaCv': 'Descargar CV',
     'hero.remote': 'Remoto · Híbrido',
@@ -38,7 +38,7 @@ const I18N = {
     'about.p1':
       'Soy desarrollador Full Stack con cinco años construyendo sistemas productivos de punta a punta: portales de logística, PWAs offline-first, ERPs y marketplaces. Me muevo cómodo tanto escribiendo un índice que baja una consulta de 13 a 6 queries como diseñando la pantalla donde esa consulta se vuelve útil.',
     'about.p2':
-      'Trabajo con React 19 / Next.js y C# / .NET 8, con Clean Architecture, CQRS y tests como red de seguridad. Me interesa la parte que casi no se ve: autenticación que no se rompe, migraciones que no duelen y un pipeline que despliega sin que nadie mire el reloj.',
+      'Trabajo con React 19 / Next.js y C# / .NET 8, con Clean Architecture, CQRS y tests como red de seguridad. Cuando el sistema viene de antes, también hago la modernización completa: de PHP 7.4 sin framework a Laravel 12, conservando el esquema real de la base. Me interesa la parte que casi no se ve: autenticación que no se rompe, migraciones que no duelen y un pipeline que despliega sin que nadie mire el reloj.',
     'about.p3':
       'También construyo herramientas para desarrollar con IA: agentes, monitoreo de costos de tokens y automatizaciones que me sacan trabajo repetitivo del medio.',
 
@@ -52,11 +52,20 @@ const I18N = {
     'projects.eyebrow': 'Proyectos',
     'projects.title': 'Lo que construí y puedo mostrar.',
     'projects.lead':
-      'Tres productos propios en marcha y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
+      'Cuatro productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
     'projects.site': 'Ver sitio',
     'projects.code': 'Código',
     'projects.download': 'Descargar',
+    'projects.deck': 'Presentación',
     'projects.askMe': 'Pedime el detalle',
+
+    'projects.fieldops.kind': 'Caso de estudio',
+    'projects.fieldops.tagline': 'Un sistema de gestión de campo en producción, reescrito de PHP 7.4 a Laravel 12',
+    'projects.fieldops.desc':
+      '378 archivos PHP sin framework, 76 tablas sin claves foráneas y 11,3 millones de filas en la tabla de tareas. Migré el esquema real sin recortes y reescribí la operación —tablero, Kanban, stock, altas, técnicos— sobre Laravel 12, con demo reproducible en Docker y datos sintéticos que respetan los mismos volúmenes.',
+    'projects.fieldops.h1': '76 tablas / 1.517 columnas migradas sin recortes',
+    'projects.fieldops.h2': 'Kanban con drag & drop validado en el servidor',
+    'projects.fieldops.h3': '53 tests de feature sobre MySQL real',
 
     'projects.fletar.kind': 'En vivo',
     'projects.fletar.tagline': 'Marketplace de fletes con subasta a ciegas y seguimiento en vivo',
@@ -162,7 +171,7 @@ const I18N = {
   en: {
     'meta.title': 'Luca Baello — Full Stack Engineer',
     'meta.description':
-      'Full Stack Engineer with 5 years of experience: React / Next.js and .NET 8, clean architecture, PostGIS, real-time systems and mobile products. Buenos Aires, Argentina.',
+      'Full Stack Engineer with 5 years of experience: React / Next.js, .NET 8 and PHP / Laravel, clean architecture, PostGIS, real-time systems and mobile products. Buenos Aires, Argentina.',
     'a11y.skip': 'Skip to content',
     'brand.role': 'Full Stack Engineer',
     'nav.projects': 'Projects',
@@ -176,7 +185,7 @@ const I18N = {
     'hero.title2': 'end to end.',
     'hero.role': 'Full Stack Engineer',
     'hero.lead':
-      'Full Stack developer with five years building end-to-end production systems: React and Next.js interfaces, C# / .NET 8 APIs, and PostgreSQL and SQL Server databases tuned for real workloads.',
+      'Full Stack developer with five years building end-to-end production systems: React and Next.js interfaces, C# / .NET 8 and PHP / Laravel APIs, and PostgreSQL, SQL Server and MySQL databases tuned for real workloads.',
     'hero.ctaProjects': 'See projects',
     'hero.ctaCv': 'Download CV',
     'hero.remote': 'Remote · Hybrid',
@@ -193,7 +202,7 @@ const I18N = {
     'about.p1':
       'I am a Full Stack developer with five years building production systems end to end: logistics portals, offline-first PWAs, ERPs and marketplaces. I am equally comfortable writing the index that takes a query from 13 down to 6 roundtrips and designing the screen where that query becomes useful.',
     'about.p2':
-      'I work with React 19 / Next.js and C# / .NET 8, using Clean Architecture, CQRS and tests as a safety net. I care about the part you barely see: authentication that does not break, migrations that do not hurt, and a pipeline that deploys without anyone watching the clock.',
+      'I work with React 19 / Next.js and C# / .NET 8, using Clean Architecture, CQRS and tests as a safety net. When the system predates all of this, I also handle the full modernization: from framework-less PHP 7.4 to Laravel 12, keeping the real database schema. I care about the part you barely see: authentication that does not break, migrations that do not hurt, and a pipeline that deploys without anyone watching the clock.',
     'about.p3':
       'I also build tooling for AI-assisted development: agents, token cost monitoring and automations that take repetitive work off the table.',
 
@@ -207,11 +216,20 @@ const I18N = {
     'projects.eyebrow': 'Projects',
     'projects.title': 'What I built and can show.',
     'projects.lead':
-      'Three products of my own and two company systems where the code is not public. Each card states the problem it solves and the technical decision that mattered most.',
+      'Four products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
     'projects.site': 'Visit site',
     'projects.code': 'Code',
     'projects.download': 'Download',
+    'projects.deck': 'Deck',
     'projects.askMe': 'Ask me for details',
+
+    'projects.fieldops.kind': 'Case study',
+    'projects.fieldops.tagline': 'A production field-operations system, rewritten from PHP 7.4 to Laravel 12',
+    'projects.fieldops.desc':
+      '378 framework-less PHP files, 76 tables without foreign keys and 11.3 million rows in the tasks table. I migrated the real schema as-is and rewrote the operation —dashboard, Kanban, stock, installations, technicians— on Laravel 12, with a reproducible Docker demo and synthetic data that matches the original volumes.',
+    'projects.fieldops.h1': '76 tables / 1,517 columns migrated as-is',
+    'projects.fieldops.h2': 'Server-validated drag & drop Kanban',
+    'projects.fieldops.h3': '53 feature tests against real MySQL',
 
     'projects.fletar.kind': 'Live',
     'projects.fletar.tagline': 'Freight marketplace with blind bidding and live tracking',
