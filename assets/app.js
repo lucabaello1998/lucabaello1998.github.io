@@ -52,11 +52,12 @@ const I18N = {
     'projects.eyebrow': 'Proyectos',
     'projects.title': 'Lo que construí y puedo mostrar.',
     'projects.lead':
-      'Cuatro productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
+      'Cinco productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
     'projects.site': 'Ver sitio',
     'projects.code': 'Código',
     'projects.download': 'Descargar',
     'projects.deck': 'Presentación',
+    'projects.report': 'Informe de ejemplo',
     'projects.askMe': 'Pedime el detalle',
 
     'projects.fieldops.kind': 'Caso de estudio',
@@ -66,6 +67,14 @@ const I18N = {
     'projects.fieldops.h1': '76 tablas / 1.517 columnas migradas sin recortes',
     'projects.fieldops.h2': 'Kanban con drag & drop validado en el servidor',
     'projects.fieldops.h3': '53 tests de feature sobre MySQL real',
+
+    'projects.legacylens.kind': 'Herramienta propia',
+    'projects.legacylens.tagline': 'Un CLI que radiografía un sistema legacy PHP/MySQL y dice cuánto duele migrarlo',
+    'projects.legacylens.desc':
+      'Nació del análisis que hice a mano para FieldOps: leer 378 archivos y 76 tablas sin claves foráneas. Lo convertí en una herramienta que parsea el dump, reconstruye las relaciones que nadie documentó, detecta SQL concatenado, funciones extintas y secretos hardcodeados, y devuelve un índice de dolor de migración con plan de acción.',
+    'projects.legacylens.h1': '24 reglas de código y 11 de esquema',
+    'projects.legacylens.h2': 'Relaciones inferidas por convención de nombre',
+    'projects.legacylens.h3': 'Informe HTML autocontenido + JSON + Markdown',
 
     'projects.fletar.kind': 'En vivo',
     'projects.fletar.tagline': 'Marketplace de fletes con subasta a ciegas y seguimiento en vivo',
@@ -98,6 +107,7 @@ const I18N = {
     'projects.rem.h1': 'Auditoría transaccional estricta',
     'projects.rem.h2': 'Firma digital de aprobaciones',
 
+    'projects.dirs.kind': 'Librería open source',
     'projects.dirs.tagline': 'Autocompletado de direcciones argentinas, como paquete de Dart',
     'projects.dirs.desc':
       'La pieza de geocoding de FletAR, extraída como librería reutilizable sobre Nominatim: caché LRU, cola de una request por segundo y un parser que devuelve calle, altura, barrio y localidad ya separados. CI con tests en cada push.',
@@ -216,11 +226,12 @@ const I18N = {
     'projects.eyebrow': 'Projects',
     'projects.title': 'What I built and can show.',
     'projects.lead':
-      'Four products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
+      'Five products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
     'projects.site': 'Visit site',
     'projects.code': 'Code',
     'projects.download': 'Download',
     'projects.deck': 'Deck',
+    'projects.report': 'Sample report',
     'projects.askMe': 'Ask me for details',
 
     'projects.fieldops.kind': 'Case study',
@@ -230,6 +241,14 @@ const I18N = {
     'projects.fieldops.h1': '76 tables / 1,517 columns migrated as-is',
     'projects.fieldops.h2': 'Server-validated drag & drop Kanban',
     'projects.fieldops.h3': '53 feature tests against real MySQL',
+
+    'projects.legacylens.kind': 'Tool of my own',
+    'projects.legacylens.tagline': 'A CLI that X-rays a legacy PHP/MySQL system and tells you how much it hurts to migrate',
+    'projects.legacylens.desc':
+      'It came out of the analysis I did by hand for FieldOps: reading 378 files and 76 tables without foreign keys. I turned it into a tool that parses the dump, rebuilds the relationships nobody ever documented, flags concatenated SQL, dead functions and hardcoded secrets, and returns a migration pain index with an action plan.',
+    'projects.legacylens.h1': '24 code rules and 11 schema rules',
+    'projects.legacylens.h2': 'Relationships inferred from column naming',
+    'projects.legacylens.h3': 'Self-contained HTML report + JSON + Markdown',
 
     'projects.fletar.kind': 'Live',
     'projects.fletar.tagline': 'Freight marketplace with blind bidding and live tracking',
@@ -262,6 +281,7 @@ const I18N = {
     'projects.rem.h1': 'Strict transactional auditing',
     'projects.rem.h2': 'Digital signature on approvals',
 
+    'projects.dirs.kind': 'Open-source library',
     'projects.dirs.tagline': 'Argentine address autocomplete, packaged for Dart',
     'projects.dirs.desc':
       'The geocoding piece of FletAR, extracted as a reusable library on top of Nominatim: LRU cache, one request per second queue, and a parser that already splits street, number, neighborhood and city. CI with tests on every push.',
