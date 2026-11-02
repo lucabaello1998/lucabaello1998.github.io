@@ -76,6 +76,15 @@ const I18N = {
     'projects.legacylens.h2': 'Relaciones inferidas por convención de nombre',
     'projects.legacylens.h3': 'Informe HTML autocontenido + JSON + Markdown',
 
+    'projects.sueldosar.kind': 'Herramienta propia',
+    'projects.sueldosar.tagline': 'Motor de liquidación argentino + observatorio de sueldos tech que se actualiza solo',
+    'projects.sueldosar.desc':
+      'Dos cosas en un repo. Un motor de liquidación en .NET 8 donde la ley es un archivo JSON: SAC, vacaciones, aportes, ganancias e indemnizaciones, con la base legal de cada concepto y 61 tests. Y un observatorio que releva ofertas tech argentinas todas las semanas y publica lo que encuentra, aunque duela: de 556 ofertas, solo el 18% declara un sueldo usable.',
+    'projects.sueldosar.h1': '61 tests xUnit + 92 pytest, CI con 3 jobs',
+    'projects.sueldosar.h2': 'La ley como dato: sumar un período es copiar un JSON',
+    'projects.sueldosar.h3': 'Filtros de relleno, ruido no-tech y atípicos, contados y publicados',
+    'projects.observatory': 'Observatorio',
+
     'projects.fletar.kind': 'En vivo',
     'projects.fletar.tagline': 'Marketplace de fletes con subasta a ciegas y seguimiento en vivo',
     'projects.fletar.desc':
@@ -249,6 +258,15 @@ const I18N = {
     'projects.legacylens.h1': '24 code rules and 11 schema rules',
     'projects.legacylens.h2': 'Relationships inferred from column naming',
     'projects.legacylens.h3': 'Self-contained HTML report + JSON + Markdown',
+
+    'projects.sueldosar.kind': 'Tool of my own',
+    'projects.sueldosar.tagline': 'Argentine payroll engine + a tech salary observatory that updates itself',
+    'projects.sueldosar.desc':
+      'Two things in one repo. A payroll engine in .NET 8 where the law is a JSON file: severance, vacations, contributions, income tax and SAC, with the legal basis for every line item and 61 tests. Plus an observatory that scrapes Argentine tech job postings every week and publishes what it finds, even when it stings: out of 556 postings, only 18% state a usable salary.',
+    'projects.sueldosar.h1': '61 xUnit tests + 92 pytest tests, 3-job CI',
+    'projects.sueldosar.h2': 'The law as data: adding a period is copying a JSON file',
+    'projects.sueldosar.h3': 'Filler, non-tech noise and outlier filters, counted and published',
+    'projects.observatory': 'Observatory',
 
     'projects.fletar.kind': 'Live',
     'projects.fletar.tagline': 'Freight marketplace with blind bidding and live tracking',
