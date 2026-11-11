@@ -4,6 +4,8 @@ Portfolio personal de **Luca Nicolás Baello** — Full Stack Engineer.
 
 🔗 <https://lucabaello1998.github.io/>
 
+![Portfolio](docs/preview.png)
+
 ## Qué es
 
 Un sitio estático de una sola página, sin frameworks ni build: HTML, CSS y
