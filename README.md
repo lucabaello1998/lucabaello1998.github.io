@@ -47,10 +47,46 @@ Después abrir <http://127.0.0.1:8941/>.
 > Abrir `index.html` con `file://` funciona, pero algunos navegadores bloquean
 > las fuentes locales por CORS; con un servidor se ve igual que en producción.
 
+## Verificar antes de publicar
+
+```bash
+node scripts/check.mjs
+```
+
+No hay build, así que lo que se rompe no rompe nada: aparece en pantalla. Este
+script cubre las tres formas en que eso pasa:
+
+| Qué revisa | Por qué |
+|---|---|
+| Cada `data-i18n` del HTML existe en **es** y en **en** | una clave que falta se muestra cruda: `hero.lead` en vez de la frase |
+| Las dos listas de traducción tienen las mismas claves | si no, al cambiar de idioma se mezclan los dos |
+| Cada `href`/`src` local apunta a un archivo real | el 404 solo se ve en producción |
+| No hay `id` duplicados | rompen los anchors y los `querySelector` |
+| Los dos CV son PDF de verdad (`%PDF-`) | un PDF corrupto se descarga y no abre |
+
+Corre en el CI (`.github/workflows/ci.yml`) en cada push y PR. No levanta el
+servidor ni abre un navegador: son archivos, no requests.
+
+Para probar el comportamiento (idioma, tema, animaciones) hay que abrirlo con un
+servidor: `?lang=en`, `?theme=light` y `?theme=dark` fuerzan el estado inicial
+sin tocar `localStorage`.
+
 ## Publicación
 
-GitHub Pages desde la rama `main`, raíz del repo. Cada push a `main` republica
-el sitio solo.
+GitHub Pages desde la rama `main`, raíz del repo (*Settings → Pages → Deploy
+from a branch → `main` / `/ (root)`*). Cada push a `main` republica el sitio
+solo: no hay build ni carpeta de salida, lo que hay en el repo es lo que se
+sirve.
+
+- El dominio es el del usuario (`lucabaello1998.github.io`), así que el repo
+  tiene que llamarse exactamente así. Si algún día se usa un dominio propio, lo
+  que cambia es `canonical`, `og:url`, `sitemap.xml` y `robots.txt`.
+- `.nojekyll` está a propósito: sin ese archivo, Pages procesa el sitio con
+  Jekyll y puede ignorar carpetas que empiezan con `_`.
+- Después de un cambio de contenido conviene abrir el sitio publicado y probar
+  los dos idiomas: el CI valida los archivos, no cómo se ve.
+- Los CV de `cv/` se descargan directamente; si se reemplazan los PDF, mantener
+  los mismos nombres (el JS arma el link por idioma).
 
 ## Editar contenido
 

@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # El sitio no tiene build: GitHub Pages publica estos mismos archivos. Lo
+    # único que puede romperse en silencio es el contenido, así que eso se
+    # revisa acá: claves de traducción, referencias locales y los PDF del CV.
+    name: Contenido e i18n
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Verificar
+        run: node scripts/check.mjs
