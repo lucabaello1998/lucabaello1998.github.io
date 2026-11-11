@@ -870,6 +870,31 @@ section { padding: 92px 0; }
   color: var(--accent);
 }
 
+/* Captura de cada proyecto: ocupa todo el ancho de la tarjeta. */
+.project-shot {
+  grid-column: 1 / -1;
+  margin: -32px -32px 0 -32px;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  background: var(--bg-elev);
+}
+.project-shot img {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+@media (max-width: 980px) {
+  .project-shot { margin: -26px -26px 0 -26px; }
+  .project-shot img { max-height: 280px; }
+}
+@media (max-width: 640px) {
+  .project-shot img { max-height: 220px; }
+}
+
 /* ---------- Experience ---------- */
 .timeline {
   position: relative;

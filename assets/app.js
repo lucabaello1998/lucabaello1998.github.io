@@ -52,15 +52,15 @@ const I18N = {
     'projects.eyebrow': 'Proyectos',
     'projects.title': 'Lo que construí y puedo mostrar.',
     'projects.lead':
-      'Seis productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
+      'Diez productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
     'projects.site': 'Ver sitio',
     'projects.code': 'Código',
     'projects.download': 'Descargar',
     'projects.deck': 'Presentación',
     'projects.report': 'Informe de ejemplo',
     'projects.askMe': 'Pedime el detalle',
-    'projects.quality.ci': 'CI en verde en los 11 repos',
-    'projects.quality.tests': '~380 tests automáticos',
+    'projects.quality.ci': 'CI en verde en 15 repos',
+    'projects.quality.tests': 'Más de 1.000 tests automáticos',
     'projects.quality.docs': 'Uso y despliegue documentados',
 
     'projects.lavar.kind': 'Producto nuevo',
@@ -110,6 +110,38 @@ const I18N = {
     'projects.opencockpit.h1': 'Deduplicación por message.id / requestId',
     'projects.opencockpit.h2': 'Subagentes sumados a la sesión raíz',
     'projects.opencockpit.h3': '7 fuentes de datos distintas, un solo panel',
+
+    'projects.jobradar.kind': 'Herramienta propia',
+    'projects.jobradar.tagline': 'Radar diario de ofertas remotas rankeadas contra mi perfil, con tablero en Pages',
+    'projects.jobradar.desc':
+      'Scraper que releva ofertas remotas todos los días, las rankea contra mi perfil y experiencia, y publica un tablero limpio en Cloudflare Pages. Incluye una CLI para consultar el estado sin abrir el navegador.',
+    'projects.jobradar.h1': 'Tablero publicado en Pages, actualizado por GitHub Actions',
+    'projects.jobradar.h2': 'Rank de encaje CV↔aviso con pesos configurables',
+    'projects.jobradar.h3': 'CLI de estado con resumen y alertas',
+
+    'projects.mlbbdraft.kind': 'Producto nuevo',
+    'projects.mlbbdraft.tagline': 'Tier list medida + drafter 5v5 con bans y consejos para 134 héroes',
+    'projects.mlbbdraft.desc':
+      'Aplicación web para Mobile Legends: Bang Bang que combina una tier list basada en datos, un drafter 5v5 con fase de bans y picks, y consejos por matchup para 134 héroes.',
+    'projects.mlbbdraft.h1': '134 héroes con roles, posiciones y counters',
+    'projects.mlbbdraft.h2': 'Drafter 5v5 con bans, picks y sugerencias',
+    'projects.mlbbdraft.h3': 'Consejos de matchup por rol y composición',
+
+    'projects.cvfit.kind': 'Herramienta propia',
+    'projects.cvfit.tagline': 'Encaje CV↔aviso, gaps detectados y CV adaptado en tres estilos',
+    'projects.cvfit.desc':
+      'Compará tu CV contra un aviso, descubrí qué palabras faltan, qué experiencias pesan más y generá una versión adaptada en tres formatos: ATS, clásico y compacto.',
+    'projects.cvfit.h1': 'Score de encaje con palabras clave del aviso',
+    'projects.cvfit.h2': 'Gaps técnicos detectados y sugeridos',
+    'projects.cvfit.h3': 'CV adaptado en 3 estilos listos para descargar',
+
+    'projects.fichada.kind': 'Producto nuevo',
+    'projects.fichada.tagline': 'Fichaje con perímetro por geolocalización, horas trabajadas y cálculo de extras',
+    'projects.fichada.desc':
+      'PWA para fichar entrada y salida validando que el dispositivo esté dentro de un perímetro geográfico. Calcula horas, extras y ausencias, con sincronización offline-first.',
+    'projects.fichada.h1': 'Perímetro configurable por geolocalización',
+    'projects.fichada.h2': 'Cálculo de horas y extras automático',
+    'projects.fichada.h3': 'Funciona offline y sincroniza al recuperar red',
 
     'projects.tms.kind': 'Empresa · código privado',
     'projects.tms.tagline': 'Planificación de rutas y trazabilidad para operación real',
@@ -245,15 +277,15 @@ const I18N = {
     'projects.eyebrow': 'Projects',
     'projects.title': 'What I built and can show.',
     'projects.lead':
-      'Six products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
+      'Ten products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
     'projects.site': 'Visit site',
     'projects.code': 'Code',
     'projects.download': 'Download',
     'projects.deck': 'Deck',
     'projects.report': 'Sample report',
     'projects.askMe': 'Ask me for details',
-    'projects.quality.ci': 'Green CI across all 11 repos',
-    'projects.quality.tests': '~380 automated tests',
+    'projects.quality.ci': 'Green CI across 15 repos',
+    'projects.quality.tests': '1,000+ automated tests',
     'projects.quality.docs': 'Usage and deploy documented',
 
     'projects.lavar.kind': 'New product',
@@ -304,6 +336,38 @@ const I18N = {
     'projects.opencockpit.h1': 'Deduplication by message.id / requestId',
     'projects.opencockpit.h2': 'Subagent usage folded into the root session',
     'projects.opencockpit.h3': '7 different data sources, one panel',
+
+    'projects.jobradar.kind': 'Tool of my own',
+    'projects.jobradar.tagline': 'Daily radar of remote job offers ranked against my profile, with a Pages dashboard',
+    'projects.jobradar.desc':
+      'A scraper that collects remote job offers every day, ranks them against my profile and experience, and publishes a clean dashboard on Cloudflare Pages. Includes a CLI to check status without opening a browser.',
+    'projects.jobradar.h1': 'Dashboard published on Pages, updated by GitHub Actions',
+    'projects.jobradar.h2': 'CV↔job fit rank with configurable weights',
+    'projects.jobradar.h3': 'Status CLI with summary and alerts',
+
+    'projects.mlbbdraft.kind': 'New product',
+    'projects.mlbbdraft.tagline': 'Data-driven tier list + 5v5 drafter with bans and tips for 134 heroes',
+    'projects.mlbbdraft.desc':
+      'Web app for Mobile Legends: Bang Bang that combines a data-driven tier list, a 5v5 drafter with ban and pick phases, and matchup tips for 134 heroes.',
+    'projects.mlbbdraft.h1': '134 heroes with roles, positions and counters',
+    'projects.mlbbdraft.h2': '5v5 drafter with bans, picks and suggestions',
+    'projects.mlbbdraft.h3': 'Matchup tips by role and team composition',
+
+    'projects.cvfit.kind': 'Tool of my own',
+    'projects.cvfit.tagline': 'CV↔job fit, detected gaps and a tailored CV in three styles',
+    'projects.cvfit.desc':
+      'Compare your CV against a job posting, discover missing keywords, see which experiences matter most, and generate a tailored version in three formats: ATS, classic and compact.',
+    'projects.cvfit.h1': 'Fit score with keywords from the job posting',
+    'projects.cvfit.h2': 'Detected and suggested technical gaps',
+    'projects.cvfit.h3': 'Tailored CV in 3 ready-to-download styles',
+
+    'projects.fichada.kind': 'New product',
+    'projects.fichada.tagline': 'Time tracking with geofenced perimeter, worked hours and overtime calculation',
+    'projects.fichada.desc':
+      'PWA to clock in and out while validating that the device is inside a geographic perimeter. Calculates hours, overtime and absences with offline-first sync.',
+    'projects.fichada.h1': 'Configurable perimeter via geolocation',
+    'projects.fichada.h2': 'Automatic hours and overtime calculation',
+    'projects.fichada.h3': 'Works offline and syncs when back online',
 
     'projects.tms.kind': 'Company · private code',
     'projects.tms.tagline': 'Route planning and traceability for real operations',

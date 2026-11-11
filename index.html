@@ -258,12 +258,12 @@
         <span class="eyebrow" data-i18n="projects.eyebrow">Proyectos</span>
         <h2 class="section-title" data-i18n="projects.title">Lo que construí y puedo mostrar.</h2>
         <p class="section-lead" data-i18n="projects.lead">
-          Seis productos propios, un experimento de UI y dos sistemas de empresa donde el código no es
+          Diez productos propios, un experimento de UI y dos sistemas de empresa donde el código no es
           público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.
         </p>
         <ul class="quality-strip">
-          <li data-i18n="projects.quality.ci">CI en verde en los 11 repos</li>
-          <li data-i18n="projects.quality.tests">~380 tests automáticos</li>
+          <li data-i18n="projects.quality.ci">CI en verde en 15 repos</li>
+          <li data-i18n="projects.quality.tests">Más de 1.000 tests automáticos</li>
           <li data-i18n="projects.quality.docs">Uso y despliegue documentados</li>
         </ul>
       </div>
@@ -271,6 +271,7 @@
       <div class="projects">
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/fieldops.png" alt="Captura del tablero de FieldOps" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">01</span>
@@ -307,6 +308,7 @@
         </article>
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/lavar.png" alt="Captura del panel de LavAR" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">02</span>
@@ -344,6 +346,7 @@
         </article>
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/legacylens.png" alt="Captura del informe de legacy-lens" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">03</span>
@@ -380,6 +383,7 @@
         </article>
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/sueldosar.png" alt="Captura de un recibo de sueldos-ar" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">04</span>
@@ -417,6 +421,7 @@
         </article>
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/fletar.png" alt="Captura de FletAR creando una publicación" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">05</span>
@@ -453,6 +458,7 @@
         </article>
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/opencockpit.png" alt="Captura del resumen de OpenCockpit" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">06</span>
@@ -489,9 +495,138 @@
         </article>
 
         <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/jobradar.png" alt="Captura del tablero de job-radar" loading="lazy" width="1200" height="700"></figure>
           <div>
             <div class="project-top">
               <span class="project-index">07</span>
+              <span class="project-kind is-live" data-i18n="projects.jobradar.kind">Herramienta propia</span>
+            </div>
+            <h3>job-radar</h3>
+            <p class="project-tagline" data-i18n="projects.jobradar.tagline">Radar diario de ofertas remotas rankeadas contra mi perfil, con tablero en Pages</p>
+            <p data-i18n="projects.jobradar.desc">
+              Scraper que releva ofertas remotas todos los días, las rankea contra mi perfil y
+              experiencia, y publica un tablero limpio en Cloudflare Pages. Incluye una CLI para
+              consultar el estado sin abrir el navegador.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.jobradar.h1">Tablero publicado en Pages, actualizado por GitHub Actions</li>
+              <li data-i18n="projects.jobradar.h2">Rank de encaje CV↔aviso con pesos configurables</li>
+              <li data-i18n="projects.jobradar.h3">CLI de estado con resumen y alertas</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Cloudflare Pages</span>
+              <span class="tag">GitHub Actions</span><span class="tag">CLI</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/job-radar" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+            <a class="project-link" href="https://lucabaello1998.github.io/job-radar/" target="_blank" rel="noopener">
+              <span data-i18n="projects.site">Ver sitio</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/mlbbdraft.png" alt="Captura de la tier list de mlbb-draft" loading="lazy" width="1200" height="700"></figure>
+          <div>
+            <div class="project-top">
+              <span class="project-index">08</span>
+              <span class="project-kind is-new" data-i18n="projects.mlbbdraft.kind">Producto nuevo</span>
+            </div>
+            <h3>mlbb-draft</h3>
+            <p class="project-tagline" data-i18n="projects.mlbbdraft.tagline">Tier list medida + drafter 5v5 con bans y consejos para 134 héroes</p>
+            <p data-i18n="projects.mlbbdraft.desc">
+              Aplicación web para Mobile Legends: Bang Bang que combina una tier list basada en
+              datos, un drafter 5v5 con fase de bans y picks, y consejos por matchup para 134 héroes.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.mlbbdraft.h1">134 héroes con roles, posiciones y counters</li>
+              <li data-i18n="projects.mlbbdraft.h2">Drafter 5v5 con bans, picks y sugerencias</li>
+              <li data-i18n="projects.mlbbdraft.h3">Consejos de matchup por rol y composición</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/mlbb-draft" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/cvfit.png" alt="Captura de la interfaz de cvfit" loading="lazy" width="1200" height="700"></figure>
+          <div>
+            <div class="project-top">
+              <span class="project-index">09</span>
+              <span class="project-kind is-live" data-i18n="projects.cvfit.kind">Herramienta propia</span>
+            </div>
+            <h3>cvfit</h3>
+            <p class="project-tagline" data-i18n="projects.cvfit.tagline">Encaje CV↔aviso, gaps detectados y CV adaptado en tres estilos</p>
+            <p data-i18n="projects.cvfit.desc">
+              Compará tu CV contra un aviso, descubrí qué palabras faltan, qué experiencias pesan
+              más y generá una versión adaptada en tres formatos: ATS, clásico y compacto.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.cvfit.h1">Score de encaje con palabras clave del aviso</li>
+              <li data-i18n="projects.cvfit.h2">Gaps técnicos detectados y sugeridos</li>
+              <li data-i18n="projects.cvfit.h3">CV adaptado en 3 estilos listos para descargar</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">TypeScript</span>
+              <span class="tag">PDF</span><span class="tag">IA aplicada</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/cvfit" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <figure class="project-shot"><img src="assets/proyectos/fichada.png" alt="Captura de la demo de fichada" loading="lazy" width="1200" height="700"></figure>
+          <div>
+            <div class="project-top">
+              <span class="project-index">10</span>
+              <span class="project-kind is-new" data-i18n="projects.fichada.kind">Producto nuevo</span>
+            </div>
+            <h3>fichada</h3>
+            <p class="project-tagline" data-i18n="projects.fichada.tagline">Fichaje con perímetro por geolocalización, horas trabajadas y cálculo de extras</p>
+            <p data-i18n="projects.fichada.desc">
+              PWA para fichar entrada y salida validando que el dispositivo esté dentro de un
+              perímetro geográfico. Calcula horas, extras y ausencias, con sincronización offline-first.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.fichada.h1">Perímetro configurable por geolocalización</li>
+              <li data-i18n="projects.fichada.h2">Cálculo de horas y extras automático</li>
+              <li data-i18n="projects.fichada.h3">Funciona offline y sincroniza al recuperar red</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">PWA</span><span class="tag">JavaScript</span>
+              <span class="tag">Geolocation</span><span class="tag">IndexedDB</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/fichada" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">11</span>
               <span class="project-kind is-private" data-i18n="projects.tms.kind">Empresa · código privado</span>
             </div>
             <h3>Ceta Logística — TMS / WMS</h3>
@@ -520,7 +655,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">08</span>
+              <span class="project-index">12</span>
               <span class="project-kind" data-i18n="projects.rem.kind">Empresa · misión crítica</span>
             </div>
             <h3>REM v3 — Gestión regulatoria farmacéutica</h3>
@@ -544,7 +679,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">09</span>
+              <span class="project-index">13</span>
               <span class="project-kind is-live" data-i18n="projects.dirs.kind">Open source</span>
             </div>
             <h3>direcciones_ar</h3>
@@ -574,7 +709,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">10</span>
+              <span class="project-index">14</span>
               <span class="project-kind" data-i18n="projects.glass.kind">Experimento</span>
             </div>
             <h3>Liquid Glass Lab</h3>
