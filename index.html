@@ -258,9 +258,14 @@
         <span class="eyebrow" data-i18n="projects.eyebrow">Proyectos</span>
         <h2 class="section-title" data-i18n="projects.title">Lo que construí y puedo mostrar.</h2>
         <p class="section-lead" data-i18n="projects.lead">
-          Tres productos propios en marcha y dos sistemas de empresa donde el código no es público.
-          Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.
+          Seis productos propios, un experimento de UI y dos sistemas de empresa donde el código no es
+          público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.
         </p>
+        <ul class="quality-strip">
+          <li data-i18n="projects.quality.ci">CI en verde en los 11 repos</li>
+          <li data-i18n="projects.quality.tests">~380 tests automáticos</li>
+          <li data-i18n="projects.quality.docs">Uso y despliegue documentados</li>
+        </ul>
       </div>
 
       <div class="projects">
@@ -305,6 +310,43 @@
           <div>
             <div class="project-top">
               <span class="project-index">02</span>
+              <span class="project-kind is-new" data-i18n="projects.lavar.kind">Producto nuevo</span>
+            </div>
+            <h3>LavAR</h3>
+            <p class="project-tagline" data-i18n="projects.lavar.tagline">La lavandería deja el cuaderno: el cliente sigue su pedido con un código, sin instalar nada</p>
+            <p data-i18n="projects.lavar.desc">
+              API en .NET 8 y panel en React para una lavandería de barrio. El mostrador carga el pedido
+              con kilos, acolchados o zapatillas, el precio queda congelado al recibirlo y el cliente
+              consulta el estado en un link con un código de 6 letras (<code>K7M2QP</code>): sin cuenta,
+              sin app, sin llamar por teléfono. Los avisos salen por WhatsApp con el mensaje ya escrito y
+              todo corre en una sola imagen Docker con SQLite.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="projects.lavar.h1">El precio se congela al crear el pedido: subir la lista no reescribe la historia</li>
+              <li data-i18n="projects.lavar.h2">Reglas de estado en el dominio: no se entrega algo que no está listo</li>
+              <li data-i18n="projects.lavar.h3">68 tests, rate limit en la consulta pública y vista del cliente con línea de tiempo</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">.NET 8</span><span class="tag">React 19</span><span class="tag">SQLite</span>
+              <span class="tag">Docker</span><span class="tag">xUnit</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a class="project-link" href="https://github.com/lucabaello1998/LavAR" target="_blank" rel="noopener">
+              <span data-i18n="projects.code">Código</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
+            </a>
+            <a class="project-link" href="https://github.com/lucabaello1998/LavAR#c%C3%B3mo-se-usa" target="_blank" rel="noopener">
+              <span data-i18n="projects.report">Cómo se usa</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h4"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-tilt>
+          <div>
+            <div class="project-top">
+              <span class="project-index">03</span>
               <span class="project-kind is-live" data-i18n="projects.legacylens.kind">Herramienta propia</span>
             </div>
             <h3>legacy-lens</h3>
@@ -340,7 +382,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">03</span>
+              <span class="project-index">04</span>
               <span class="project-kind is-live" data-i18n="projects.sueldosar.kind">Herramienta propia</span>
             </div>
             <h3>sueldos-ar</h3>
@@ -377,7 +419,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">04</span>
+              <span class="project-index">05</span>
               <span class="project-kind is-live" data-i18n="projects.fletar.kind">En vivo</span>
             </div>
             <h3>FletAR</h3>
@@ -413,7 +455,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">05</span>
+              <span class="project-index">06</span>
               <span class="project-kind is-live" data-i18n="projects.opencockpit.kind">Open source</span>
             </div>
             <h3>OpenCockpit</h3>
@@ -449,7 +491,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">06</span>
+              <span class="project-index">07</span>
               <span class="project-kind is-private" data-i18n="projects.tms.kind">Empresa · código privado</span>
             </div>
             <h3>Ceta Logística — TMS / WMS</h3>
@@ -478,7 +520,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">07</span>
+              <span class="project-index">08</span>
               <span class="project-kind" data-i18n="projects.rem.kind">Empresa · misión crítica</span>
             </div>
             <h3>REM v3 — Gestión regulatoria farmacéutica</h3>
@@ -502,7 +544,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">08</span>
+              <span class="project-index">09</span>
               <span class="project-kind is-live" data-i18n="projects.dirs.kind">Open source</span>
             </div>
             <h3>direcciones_ar</h3>
@@ -532,7 +574,7 @@
         <article class="project" data-reveal data-tilt>
           <div>
             <div class="project-top">
-              <span class="project-index">09</span>
+              <span class="project-index">10</span>
               <span class="project-kind" data-i18n="projects.glass.kind">Experimento</span>
             </div>
             <h3>Liquid Glass Lab</h3>

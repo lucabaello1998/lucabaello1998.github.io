@@ -278,6 +278,33 @@ section { padding: 92px 0; }
   max-width: 60ch;
 }
 
+/* Franja de calidad debajo del título de proyectos: tres datos duros, sin adjetivos. */
+.quality-strip {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.quality-strip li {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+
+.quality-strip li::before {
+  content: "✓";
+  color: var(--accent-2);
+  margin-right: 6px;
+  font-weight: 700;
+}
+
 /* ---------- Header ---------- */
 .header {
   position: fixed;
@@ -759,6 +786,7 @@ section { padding: 92px 0; }
 }
 .project-kind.is-live { border-color: rgba(94, 234, 212, 0.4); color: var(--accent-2); }
 .project-kind.is-private { border-color: rgba(167, 139, 250, 0.4); color: #b8a4ff; }
+.project-kind.is-new { border-color: rgba(251, 191, 36, 0.45); color: #fbbf24; }
 
 .project h3 {
   font-size: clamp(1.3rem, 2.2vw, 1.62rem);

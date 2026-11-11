@@ -52,13 +52,24 @@ const I18N = {
     'projects.eyebrow': 'Proyectos',
     'projects.title': 'Lo que construí y puedo mostrar.',
     'projects.lead':
-      'Cinco productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
+      'Seis productos propios, un experimento de UI y dos sistemas de empresa donde el código no es público. Cada tarjeta dice qué problema resuelve y qué decisión técnica tuvo más peso.',
     'projects.site': 'Ver sitio',
     'projects.code': 'Código',
     'projects.download': 'Descargar',
     'projects.deck': 'Presentación',
     'projects.report': 'Informe de ejemplo',
     'projects.askMe': 'Pedime el detalle',
+    'projects.quality.ci': 'CI en verde en los 11 repos',
+    'projects.quality.tests': '~380 tests automáticos',
+    'projects.quality.docs': 'Uso y despliegue documentados',
+
+    'projects.lavar.kind': 'Producto nuevo',
+    'projects.lavar.tagline': 'La lavandería deja el cuaderno: el cliente sigue su pedido con un código, sin instalar nada',
+    'projects.lavar.desc':
+      'API en .NET 8 y panel en React para una lavandería de barrio. El mostrador carga el pedido con kilos, acolchados o zapatillas, el precio queda congelado al recibirlo y el cliente consulta el estado en un link con un código de 6 letras (K7M2QP): sin cuenta, sin app, sin llamar por teléfono. Los avisos salen por WhatsApp con el mensaje ya escrito y todo corre en una sola imagen Docker con SQLite.',
+    'projects.lavar.h1': 'El precio se congela al crear el pedido: subir la lista no reescribe la historia',
+    'projects.lavar.h2': 'Reglas de estado en el dominio: no se entrega algo que no está listo',
+    'projects.lavar.h3': '68 tests, rate limit en la consulta pública y vista del cliente con línea de tiempo',
 
     'projects.fieldops.kind': 'Caso de estudio',
     'projects.fieldops.tagline': 'Un sistema de gestión de campo en producción, reescrito de PHP 7.4 a Laravel 12',
@@ -66,7 +77,7 @@ const I18N = {
       '378 archivos PHP sin framework, 76 tablas sin claves foráneas y 11,3 millones de filas en la tabla de tareas. Migré el esquema real sin recortes y reescribí la operación —tablero, Kanban, stock, altas, técnicos— sobre Laravel 12, con demo reproducible en Docker y datos sintéticos que respetan los mismos volúmenes.',
     'projects.fieldops.h1': '76 tablas / 1.517 columnas migradas sin recortes',
     'projects.fieldops.h2': 'Kanban con drag & drop validado en el servidor',
-    'projects.fieldops.h3': '53 tests de feature sobre MySQL real',
+    'projects.fieldops.h3': '62 tests de feature sobre MySQL real',
 
     'projects.legacylens.kind': 'Herramienta propia',
     'projects.legacylens.tagline': 'Un CLI que radiografía un sistema legacy PHP/MySQL y dice cuánto duele migrarlo',
@@ -75,12 +86,11 @@ const I18N = {
     'projects.legacylens.h1': '24 reglas de código y 11 de esquema',
     'projects.legacylens.h2': 'Relaciones inferidas por convención de nombre',
     'projects.legacylens.h3': 'Informe HTML autocontenido + JSON + Markdown',
-
     'projects.sueldosar.kind': 'Herramienta propia',
     'projects.sueldosar.tagline': 'Motor de liquidación argentino + observatorio de sueldos tech que se actualiza solo',
     'projects.sueldosar.desc':
       'Dos cosas en un repo. Un motor de liquidación en .NET 8 donde la ley es un archivo JSON: SAC, vacaciones, aportes, ganancias e indemnizaciones, con la base legal de cada concepto y 61 tests. Y un observatorio que releva ofertas tech argentinas todas las semanas y publica lo que encuentra, aunque duela: la mayoría no declara sueldo, y las que lo declaran suelen publicar montos de relleno.',
-    'projects.sueldosar.h1': '61 tests xUnit + 92 pytest, CI con 3 jobs',
+    'projects.sueldosar.h1': '77 tests xUnit + 101 pytest, CI con 3 jobs',
     'projects.sueldosar.h2': 'La ley como dato: sumar un período es copiar un JSON',
     'projects.sueldosar.h3': 'Filtros de relleno, ruido no-tech y atípicos, contados y publicados',
     'projects.observatory': 'Observatorio',
@@ -120,7 +130,7 @@ const I18N = {
     'projects.dirs.tagline': 'Autocompletado de direcciones argentinas, como paquete de Dart',
     'projects.dirs.desc':
       'La pieza de geocoding de FletAR, extraída como librería reutilizable sobre Nominatim: caché LRU, cola de una request por segundo y un parser que devuelve calle, altura, barrio y localidad ya separados. CI con tests en cada push.',
-    'projects.dirs.h1': '17 tests sin tocar el servicio real',
+    'projects.dirs.h1': '18 tests sin tocar el servicio real',
     'projects.dirs.h2': '“Sin resultados” ≠ “falló el servicio”',
 
     'projects.glass.kind': 'Experimento',
@@ -235,13 +245,24 @@ const I18N = {
     'projects.eyebrow': 'Projects',
     'projects.title': 'What I built and can show.',
     'projects.lead':
-      'Five products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
+      'Six products of my own, a UI experiment and two company systems whose code is private. Each card states the problem it solves and the technical decision that mattered most.',
     'projects.site': 'Visit site',
     'projects.code': 'Code',
     'projects.download': 'Download',
     'projects.deck': 'Deck',
     'projects.report': 'Sample report',
     'projects.askMe': 'Ask me for details',
+    'projects.quality.ci': 'Green CI across all 11 repos',
+    'projects.quality.tests': '~380 automated tests',
+    'projects.quality.docs': 'Usage and deploy documented',
+
+    'projects.lavar.kind': 'New product',
+    'projects.lavar.tagline': 'The laundromat drops the notebook: customers track their order with a code, no app required',
+    'projects.lavar.desc':
+      'A .NET 8 API and a React panel for a neighborhood laundromat. The counter logs the order with kilos, duvets or shoes, the price is frozen at drop-off, and the customer checks the status on a link with a 6-letter code (K7M2QP): no account, no app, no phone call. Notices go out on WhatsApp with the message pre-written, and the whole thing runs in a single Docker image with SQLite.',
+    'projects.lavar.h1': 'Price frozen when the order is created: raising the list never rewrites history',
+    'projects.lavar.h2': 'State rules live in the domain: you cannot hand over what is not ready',
+    'projects.lavar.h3': '68 tests, rate-limited public lookup and a customer timeline view',
 
     'projects.fieldops.kind': 'Case study',
     'projects.fieldops.tagline': 'A production field-operations system, rewritten from PHP 7.4 to Laravel 12',
@@ -249,7 +270,7 @@ const I18N = {
       '378 framework-less PHP files, 76 tables without foreign keys and 11.3 million rows in the tasks table. I migrated the real schema as-is and rewrote the operation —dashboard, Kanban, stock, installations, technicians— on Laravel 12, with a reproducible Docker demo and synthetic data that matches the original volumes.',
     'projects.fieldops.h1': '76 tables / 1,517 columns migrated as-is',
     'projects.fieldops.h2': 'Server-validated drag & drop Kanban',
-    'projects.fieldops.h3': '53 feature tests against real MySQL',
+    'projects.fieldops.h3': '62 feature tests against real MySQL',
 
     'projects.legacylens.kind': 'Tool of my own',
     'projects.legacylens.tagline': 'A CLI that X-rays a legacy PHP/MySQL system and tells you how much it hurts to migrate',
@@ -263,7 +284,7 @@ const I18N = {
     'projects.sueldosar.tagline': 'Argentine payroll engine + a tech salary observatory that updates itself',
     'projects.sueldosar.desc':
       'Two things in one repo. A payroll engine in .NET 8 where the law is a JSON file: severance, vacations, contributions, income tax and SAC, with the legal basis for every line item and 61 tests. Plus an observatory that scrapes Argentine tech job postings every week and publishes what it finds, even when it stings: most postings do not state a salary, and the ones that do usually publish filler amounts.',
-    'projects.sueldosar.h1': '61 xUnit tests + 92 pytest tests, 3-job CI',
+    'projects.sueldosar.h1': '77 xUnit tests + 101 pytest tests, 3-job CI',
     'projects.sueldosar.h2': 'The law as data: adding a period is copying a JSON file',
     'projects.sueldosar.h3': 'Filler, non-tech noise and outlier filters, counted and published',
     'projects.observatory': 'Observatory',
@@ -303,7 +324,7 @@ const I18N = {
     'projects.dirs.tagline': 'Argentine address autocomplete, packaged for Dart',
     'projects.dirs.desc':
       'The geocoding piece of FletAR, extracted as a reusable library on top of Nominatim: LRU cache, one request per second queue, and a parser that already splits street, number, neighborhood and city. CI with tests on every push.',
-    'projects.dirs.h1': '17 tests without touching the real service',
+    'projects.dirs.h1': '18 tests without touching the real service',
     'projects.dirs.h2': '“No results” ≠ “the service failed”',
 
     'projects.glass.kind': 'Experiment',
