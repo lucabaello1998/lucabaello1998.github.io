@@ -179,6 +179,13 @@ const I18N = {
     'projects.memoria.h1': '132 tests: cada cita se abre y se verifica',
     'projects.memoria.h2': 'Evals: 83% con memoria, 0% sin memoria',
 
+    'projects.pedidos.kind': 'Open source',
+    'projects.pedidos.tagline': 'Pedidos por MCP, con permisos por cliente',
+    'projects.pedidos.desc':
+      'Servidor MCP para que un cliente consulte sus pedidos desde Claude o ChatGPT: estado, ítems, total e historial. El token vive en la configuración del cliente MCP y no en el prompt, así que una cuenta no puede ver los pedidos de otra. Máquina de estados explícita y dinero en centavos enteros.',
+    'projects.pedidos.h1': '55 tests: permisos, estados y protocolo MCP',
+    'projects.pedidos.h2': 'Un pedido ajeno responde "no existe"',
+
     'experience.eyebrow': 'Experiencia',
     'experience.title': 'Cinco años, cuatro equipos.',
     'experience.lead':
@@ -411,6 +418,13 @@ const I18N = {
       'MCP server that indexes notes, memory files and READMEs into SQLite FTS5 and exposes them to Claude Code, Codex or Cursor. Lexical and hybrid search with embeddings, citations you can actually open, and evals with an accuracy and cost table. Saves new notes without duplicating them. No dependencies, no API key.',
     'projects.memoria.h1': '132 tests: every citation is opened and checked',
     'projects.memoria.h2': 'Evals: 83% with memory, 0% without it',
+
+    'projects.pedidos.kind': 'Open source',
+    'projects.pedidos.tagline': 'Orders over MCP, scoped per customer',
+    'projects.pedidos.desc':
+      'MCP server that lets a customer check their orders from Claude or ChatGPT: status, items, total and history. The token lives in the MCP client config, not in the prompt, so one account cannot see another account orders. Explicit state machine and money in integer cents.',
+    'projects.pedidos.h1': '55 tests: permissions, states and MCP protocol',
+    'projects.pedidos.h2': 'Another customer order answers "does not exist"',
 
     'experience.eyebrow': 'Experience',
     'experience.title': 'Five years, four teams.',
