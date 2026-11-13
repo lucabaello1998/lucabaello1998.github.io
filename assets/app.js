@@ -172,6 +172,13 @@ const I18N = {
     'projects.glass.h1': 'SDF + displacement map generados al vuelo',
     'projects.glass.h2': 'React 19 + Tailwind v4 + dnd-kit',
 
+    'projects.memoria.kind': 'Open source',
+    'projects.memoria.tagline': 'Memoria portable para agentes, con citas archivo:línea',
+    'projects.memoria.desc':
+      'Servidor MCP que indexa notas, memorias y READMEs en SQLite FTS5 y los expone a Claude Code, Codex o Cursor. Fragmentos por encabezado, búsqueda BM25 con acentos normalizados y citas que se pueden abrir. Guarda notas nuevas sin duplicarlas. Sin dependencias ni API key.',
+    'projects.memoria.h1': '82 tests: cada cita se abre y se verifica',
+    'projects.memoria.h2': '530 archivos reindexados en 0,31 s',
+
     'experience.eyebrow': 'Experiencia',
     'experience.title': 'Cinco años, cuatro equipos.',
     'experience.lead':
@@ -397,6 +404,13 @@ const I18N = {
       'A counter and a drag & drop list where the glass refracts whatever is behind it. The effect is computed at runtime with feDisplacementMap and a signed distance field generated in the browser, instead of a background image.',
     'projects.glass.h1': 'SDF + displacement map generated on the fly',
     'projects.glass.h2': 'React 19 + Tailwind v4 + dnd-kit',
+
+    'projects.memoria.kind': 'Open source',
+    'projects.memoria.tagline': 'Portable memory for agents, with file:line citations',
+    'projects.memoria.desc':
+      'MCP server that indexes notes, memory files and READMEs into SQLite FTS5 and exposes them to Claude Code, Codex or Cursor. Heading-based chunks, BM25 search with normalized accents and citations you can actually open. Saves new notes without duplicating them. No dependencies, no API key.',
+    'projects.memoria.h1': '82 tests: every citation is opened and checked',
+    'projects.memoria.h2': '530 files reindexed in 0.31 s',
 
     'experience.eyebrow': 'Experience',
     'experience.title': 'Five years, four teams.',
