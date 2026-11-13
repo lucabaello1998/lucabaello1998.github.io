@@ -175,9 +175,9 @@ const I18N = {
     'projects.memoria.kind': 'Open source',
     'projects.memoria.tagline': 'Memoria portable para agentes, con citas archivo:línea',
     'projects.memoria.desc':
-      'Servidor MCP que indexa notas, memorias y READMEs en SQLite FTS5 y los expone a Claude Code, Codex o Cursor. Fragmentos por encabezado, búsqueda BM25 con acentos normalizados y citas que se pueden abrir. Guarda notas nuevas sin duplicarlas. Sin dependencias ni API key.',
-    'projects.memoria.h1': '82 tests: cada cita se abre y se verifica',
-    'projects.memoria.h2': '530 archivos reindexados en 0,31 s',
+      'Servidor MCP que indexa notas, memorias y READMEs en SQLite FTS5 y los expone a Claude Code, Codex o Cursor. Búsqueda léxica e híbrida con embeddings, citas que se pueden abrir y evals con tabla de aciertos y costo. Guarda notas nuevas sin duplicarlas. Sin dependencias ni API key.',
+    'projects.memoria.h1': '132 tests: cada cita se abre y se verifica',
+    'projects.memoria.h2': 'Evals: 83% con memoria, 0% sin memoria',
 
     'experience.eyebrow': 'Experiencia',
     'experience.title': 'Cinco años, cuatro equipos.',
@@ -408,9 +408,9 @@ const I18N = {
     'projects.memoria.kind': 'Open source',
     'projects.memoria.tagline': 'Portable memory for agents, with file:line citations',
     'projects.memoria.desc':
-      'MCP server that indexes notes, memory files and READMEs into SQLite FTS5 and exposes them to Claude Code, Codex or Cursor. Heading-based chunks, BM25 search with normalized accents and citations you can actually open. Saves new notes without duplicating them. No dependencies, no API key.',
-    'projects.memoria.h1': '82 tests: every citation is opened and checked',
-    'projects.memoria.h2': '530 files reindexed in 0.31 s',
+      'MCP server that indexes notes, memory files and READMEs into SQLite FTS5 and exposes them to Claude Code, Codex or Cursor. Lexical and hybrid search with embeddings, citations you can actually open, and evals with an accuracy and cost table. Saves new notes without duplicating them. No dependencies, no API key.',
+    'projects.memoria.h1': '132 tests: every citation is opened and checked',
+    'projects.memoria.h2': 'Evals: 83% with memory, 0% without it',
 
     'experience.eyebrow': 'Experience',
     'experience.title': 'Five years, four teams.',

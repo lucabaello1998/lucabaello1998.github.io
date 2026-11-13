@@ -749,13 +749,13 @@
             <p class="project-tagline" data-i18n="projects.memoria.tagline">Memoria portable para agentes, con citas archivo:línea</p>
             <p data-i18n="projects.memoria.desc">
               Servidor MCP que indexa notas, memorias y READMEs en SQLite FTS5 y los expone a
-              Claude Code, Codex o Cursor. Fragmentos por encabezado, búsqueda BM25 con acentos
-              normalizados y citas que se pueden abrir. Guarda notas nuevas sin duplicarlas.
+              Claude Code, Codex o Cursor. Búsqueda léxica e híbrida con embeddings, citas que se
+              pueden abrir y evals con tabla de aciertos y costo. Guarda notas nuevas sin duplicarlas.
               Sin dependencias ni API key.
             </p>
             <ul class="project-highlights">
-              <li data-i18n="projects.memoria.h1">82 tests: cada cita se abre y se verifica</li>
-              <li data-i18n="projects.memoria.h2">530 archivos reindexados en 0,31 s</li>
+              <li data-i18n="projects.memoria.h1">132 tests: cada cita se abre y se verifica</li>
+              <li data-i18n="projects.memoria.h2">Evals: 83% con memoria, 0% sin memoria</li>
             </ul>
             <div class="tags">
               <span class="tag">MCP</span><span class="tag">Node.js</span><span class="tag">SQLite FTS5</span>
